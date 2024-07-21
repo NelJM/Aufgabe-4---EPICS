@@ -1,0 +1,32 @@
+record(timer, "Timer Record") {
+  field(VAL, "Timer Value")
+  field(SET, "Timer Setpoint")
+  field(RSTS, "Reset Status")
+  field(ENBL, "Enable Timer")
+  field(STAT, "Timer Status")
+  field(PREC, "Timer Precision")
+  field(TSE, "Time Seconds Expired")
+  field(TME, "Time Minutes Expired")
+  field(TTE, "Time Total Expired")
+  field(AACK, "Alarm Acknowledge")
+  field(ALM, "Alarm")
+  field(ALST, "Alarm Status")
+
+  // other fields as needed
+
+  dset(longin) {
+    field(DRIV, ".VAL")
+  }
+  dset(longout) {
+    field(DRIV, ".VAL")
+  }
+  dset(boolin) {
+    field(DRIV, ".ENBL")
+  }
+  dset(boolout) {
+    field(DRIV, ".ALM")
+  }
+
+  // other device support sets as needed
+}
+
