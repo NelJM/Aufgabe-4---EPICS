@@ -1,0 +1,8 @@
+record(timer, "myTimer") {
+  field(DTYP, "Timer")
+  field(OUT, "@asynInt($(PORT),0,32) myTimerAlarm")
+  field(INP, "@asynInt($(PORT),0,31) myTimerEnable")
+  field(SCAN, "I/O Intr")
+  field(SET, "0:0:5.0")
+  field(PREC, "1.0")
+}
